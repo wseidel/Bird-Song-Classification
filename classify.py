@@ -123,7 +123,7 @@ for i in tqdm(range(len(data_test))) :
     curr = data_test[i]
     curr = os.getcwd() + "/BritishBirdSongDataset/songs/songs/xc" + str(curr) + ".flac"
     y, sr = librosa.load(curr)
-    dur = librosa.get_duration(y, sr)
+    dur = librosa.get_duration(y=y, sr=sr) # dur = librosa.get_duration(y, sr)
 
     # Normalize time series
     y = ((y-np.amin(y))*2)/(np.amax(y) - np.amin(y)) - 1
@@ -143,7 +143,7 @@ for i in tqdm(range(len(data_test))) :
     sil = org_len - final_len
 
 
-    dur = librosa.get_duration(y, sr)
+    dur = librosa.get_duration(y=y, sr=sr) # dur = librosa.get_duration(y, sr)
     start = 0
     end = frame_len
     for j in range(0, len(y), int(frame_len*0.5)) :

@@ -10,7 +10,9 @@ from keras.models import Model, load_model, Sequential
 from keras.callbacks import ModelCheckpoint
 from keras.layers import Input, Dense, Embedding, AveragePooling1D, dot, UpSampling2D, concatenate, BatchNormalization, LSTM, Multiply, Conv2D, MaxPool2D, Add, dot, GlobalMaxPool1D, Dropout, Masking, Activation, MaxPool1D, Conv1D, Flatten, TimeDistributed, Lambda
 from keras.regularizers import l2
-from keras.utils.vis_utils import plot_model
+# from keras.utils.vis_utils import plot_model
+from tensorflow.keras.utils import plot_model
+
 from tensorflow.keras.utils import to_categorical
 from sklearn.model_selection import train_test_split
 from keras.optimizers import Adam
